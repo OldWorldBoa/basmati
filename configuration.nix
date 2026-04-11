@@ -67,15 +67,10 @@
     isNormalUser = true;
     description = "oldworldboa";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-      kdePackages.kate
-    #  thunderbird
-    ];
   };
 
-  # Install firefox.
+  # Install hyprland
   programs = {
-    firefox.enable = true;
     hyprland = {
       enable = true;
       package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
@@ -100,7 +95,7 @@
   environment.systemPackages = with pkgs; [
     vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
     pkgs.kitty
-    pkgs.discord
+    pkgs.nnn
   #  wget
   ];
 
