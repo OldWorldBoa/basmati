@@ -1,9 +1,10 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, inputs, ... }:
 
 {
   imports = [
     ./git.nix
     ./hypr/hyprland.nix
+    inputs.nixvim.homeModules.nixvim
   ];
 
   home = {
@@ -25,6 +26,10 @@
       settings = {
         "webgl.disabled" = false;
       };
+    };
+    nixvim = {
+      enable = true;
+      imports = [ ./nixvim.nix ];
     };
   };
 }

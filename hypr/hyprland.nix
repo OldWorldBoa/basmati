@@ -27,7 +27,7 @@
       "$terminal" = "kitty tmux";
       "$browser" = "librewolf";
       "$launcher" = "hyprlauncher";
-      "$file-explorer" = "$terminal nvim";
+      "$file-explorer" = "$terminal nnn";
 
       exec-once = [
         "$terminal"
