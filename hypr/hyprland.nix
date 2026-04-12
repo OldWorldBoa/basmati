@@ -4,6 +4,7 @@
 {
   imports = [
     ./default-style.nix
+    ./keybinds.nix
   ];
 
   wayland.windowManager.hyprland = {
@@ -19,29 +20,27 @@
       ###########
       monitor = ",preferred,auto,auto";
 
-      ############
-      # Keybinds #
-      ############
+      ###########
+      # Layouts #
+      ###########
 
-      "$mod" = "SUPER";
-      "$terminal" = "kitty tmux";
-      "$browser" = "librewolf";
-      "$launcher" = "hyprlauncher";
-      "$file-explorer" = "$terminal nnn";
+      dwindle = {
+        pseudotile = true;
+	preserve_split = true;
+      };
 
-      exec-once = [
-        "$terminal"
-        "$browser"
-      ];
+      master = {
+        new_status = "inherit";
+      };
 
-      bind = [
-        "$mod, M, exit,"
-        "$mod, C, killactive,"
-        "$mod, Q, exec, $terminal"
-        "$mod, B, exec, $browser"
-        "$mod, R, exec, $launcher"
-        "$mod, E, exec, $file-explorer"
-      ];
+      ########
+      # Misc #
+      ########
+
+      misc = {
+        disable_hyprland_logo = true;
+	force_default_wallpaper = 0;
+      };
     };
   };
 }

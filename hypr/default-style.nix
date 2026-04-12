@@ -34,7 +34,7 @@
       };
 
       animations = {
-        enabld = "yes, please :)"
+        enabled = "yes, please :)";
 
 	bezier = [ 
 	  "easeOutQuint,0.23,1,0.32,1"
@@ -50,7 +50,7 @@
 	  "windows,1,4.79,easeOutQuint"
 	  "windowsIn,1,4.1,easeOutQuint,popin 87%"
 	  "windowsOut,1,1.49,linear,popin 87%"
-	  "fadein,1,1.73,almostLinear"
+	  "fadeIn,1,1.73,almostLinear"
 	  "fadeOut,1,1.46,almostLinear"
 	  "fade,1,3.03,quick"
 	  "layers,1,3.81,easeOutQuint"
