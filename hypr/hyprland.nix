@@ -1,5 +1,5 @@
 
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, inputs, ... }:
 
 {
   imports = [
@@ -9,7 +9,9 @@
 
   wayland.windowManager.hyprland = {
     enable = true;
-    package = pkgs.hyprland;
+    withUWSM = true;
+    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+    portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
     systemd.enable = true;
 
     settings = {
@@ -20,7 +22,7 @@
       ###########
       monitor = ",preferred,auto,auto";
       windowrule = [
-        "match:class .*,suppress_event maximize"
+        "match:class .*, suppress_event maximize"
 	"match:class ^$, match:title ^$, match:xwayland true, match:float true, match:fullscreen: false, match:pin false, no_focus on"
       ];
 
