@@ -3,6 +3,12 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
     nixvim.url = "github:nix-community/nixvim";
     hyprland.url = "github:hyprwm/Hyprland";
+
+    hyprland-plugins = {
+      url = "github:hyprwm/hyprland-plugins";
+      inputs.hyprland.follows = "hyprland";
+    };
+
     home-manager = {
       url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -17,8 +23,6 @@
         {
           wayland.windowManager.hyprland = {
  	    enable = true;
-            #package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-            #portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
           };
         }
       ];

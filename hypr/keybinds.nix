@@ -13,6 +13,7 @@
     exec-once = [
       "$terminal"
       "$browser"
+      "blueman-applet"
     ];
 
     bind = [
