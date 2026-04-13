@@ -4,7 +4,6 @@
   imports = [
     ./git.nix
     ./hypr/hyprland.nix
-    ./nixvim/nixvim.nix
     inputs.hyprland.homeManagerModules.default
     inputs.nixvim.homeModules.nixvim
   ];
