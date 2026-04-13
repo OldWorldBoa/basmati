@@ -5,7 +5,6 @@
     ./git.nix
     inputs.hyprland.homeManagerModules.default
     ./hypr/hyprland.nix
-    inputs.nixvim.homeModules.nixvim
     ./nixvim
   ];
 
