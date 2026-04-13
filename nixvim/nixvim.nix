@@ -1,9 +1,9 @@
 { lib, ... }:
 
 {
-  programs.nixvim = {
-    enable = true;
-    
-    plugins.nvim-autopairs.enable = true;
+  colorschemes = {
+    oxocarbon.enable = true;
   };
+    
+  plugins.nvim-autopairs.enable = true;
 }
