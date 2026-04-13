@@ -2,16 +2,15 @@
 
 {
   imports = [
-    inputs.nixvim.homeManagerModules.nixvim
+    inputs.nixvim.homeModules.nixvim
     ./plugins
+    ./opts.nix
+    ./keymaps.nix
   ];
-
-  home.shellAliases.v = "nvim";
 
   programs.nixvim = {
     enable = true;
     defaultEditor = true;
-    nixpkgs.useGlobalPackages = true;
     viAlias = true;
     vimAlias = true;
     luaLoader.enable = true;
