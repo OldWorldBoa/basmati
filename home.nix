@@ -3,9 +3,10 @@
 {
   imports = [
     ./git.nix
-    ./hypr/hyprland.nix
     inputs.hyprland.homeManagerModules.default
+    ./hypr/hyprland.nix
     inputs.nixvim.homeModules.nixvim
+    ./nixvim
   ];
 
   home = {
@@ -37,11 +38,6 @@
       settings = {
         "webgl.disabled" = false;
       };
-    };
-
-    nixvim = {
-      enable = true;
-      imports = [ ./nixvim/nixvim.nix ];
     };
   };
 }
