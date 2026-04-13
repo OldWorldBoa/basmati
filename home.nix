@@ -42,7 +42,7 @@
 
     nixvim = {
       enable = true;
-      imports = [ ./nixvim.nix ];
+      imports = [ ./nixvim/nixvim.nix ];
     };
   };
 }
