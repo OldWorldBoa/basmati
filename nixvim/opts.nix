@@ -1,6 +1,6 @@
 {
   programs.nixvim = {
-    colorschemes.catpuccin.enable = true;
+    colorschemes.catppuccin.enable = true;
 
     globals = {
       mapleader = " ";
@@ -8,7 +8,9 @@
     };
 
     opts = {
+      number = true;
       fileencoding = "utf-8";
+      shiftwidth = 2;
     };
   };
 }
