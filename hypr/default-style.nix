@@ -67,6 +67,10 @@
 	  "workspacesOut,1,1.94,almostLinear,fade"
 	];
       };
+
+      misc = {
+        background_color = "0xfcf9ed";
+      };
     };
   };
 }

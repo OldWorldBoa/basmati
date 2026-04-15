@@ -1,6 +1,12 @@
 {
   programs.nixvim = {
-    colorschemes.catppuccin.enable = true;
+    colorschemes.cyberdream = {
+      enable = true;
+      settings =  {
+        variang = "light";
+	transparent = true;
+      };
+    };
 
     globals = {
       mapleader = " ";
@@ -11,6 +17,7 @@
       number = true;
       fileencoding = "utf-8";
       shiftwidth = 2;
+      clipboard = [ "unnamedplus" ];
     };
   };
 }

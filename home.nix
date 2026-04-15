@@ -6,6 +6,7 @@
     inputs.hyprland.homeManagerModules.default
     ./hypr/hyprland.nix
     ./nixvim
+    ./kitty/kitty.nix
   ];
 
   home = {
@@ -24,7 +25,6 @@
 
   programs = {
     home-manager.enable = true;
-    kitty.enable = true;
     waybar = {
       enable = true;
       settings.main = {
