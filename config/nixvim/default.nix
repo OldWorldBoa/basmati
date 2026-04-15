@@ -2,7 +2,6 @@
 
 {
   imports = [
-    inputs.nixvim.homeModules.nixvim
     ./plugins
     ./opts.nix
     ./keymap.nix

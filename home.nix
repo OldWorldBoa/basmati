@@ -2,6 +2,7 @@
 
 {
   imports = [
+    inputs.nixvim.homeModules.nixvim
     ./config
   ];
 
@@ -12,7 +13,6 @@
     packages = [
       pkgs.hyprlauncher
       pkgs.discord
-      pkgs.tmux
       pkgs.steam
       pkgs.blueman
       pkgs.wl-clipboard-rs

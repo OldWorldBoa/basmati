@@ -4,11 +4,6 @@
     nixvim.url = "github:nix-community/nixvim";
     hyprland.url = "github:hyprwm/Hyprland";
 
-    hyprland-plugins = {
-      url = "github:hyprwm/hyprland-plugins";
-      inputs.hyprland.follows = "hyprland";
-    };
-
     home-manager = {
       url = "github:nix-community/home-manager/release-25.11";
     };
@@ -21,8 +16,6 @@
 
   outputs = inputs@{ self, nixpkgs, nixvim, home-manager, hyprland, stylix, ... }: {
     homeConfigurations."oldworldboa@nixos" = home-manager.lib.homeManagerConfiguration {
-      pkgs = nixpkgs.legacyPackages.x86_64-linux;
-
       modules = [
         {
           wayland.windowManager.hyprland = {

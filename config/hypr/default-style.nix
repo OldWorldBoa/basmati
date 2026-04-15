@@ -18,7 +18,8 @@
       };
 
       decoration = {
-        rounding = 10;
+        rounding = 15;
+	rounding_power = 1.0;
 
 	shadow = {
 	  enabled = true;

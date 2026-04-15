@@ -2,10 +2,9 @@
 { config, lib, pkgs, ... }:
 
 {
-
   wayland.windowManager.hyprland.settings = {
     "$mod" = "SUPER";
-    "$terminal" = "kitty tmux";
+    "$terminal" = "kitty";
     "$browser" = "librewolf";
     "$launcher" = "hyprlauncher";
     "$file-explorer" = "$terminal nnn";

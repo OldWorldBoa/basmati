@@ -3,7 +3,6 @@
 
 {
   imports = [
-    inputs.hyprland.homeManagerModules.default
     ./default-style.nix
     ./keybinds.nix
   ];
