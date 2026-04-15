@@ -16,16 +16,11 @@
       pkgs.steam
       pkgs.blueman
       pkgs.wl-clipboard-rs
+      pkgs.pavucontrol
     ];
   };
 
   programs = {
     home-manager.enable = true;
-    waybar = {
-      enable = true;
-      settings.main = {
-        
-      };
-    };
   };
 }

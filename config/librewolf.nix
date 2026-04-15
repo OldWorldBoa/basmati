@@ -7,7 +7,11 @@
         "webgl.disabled" = false;
       };
       profiles = {
-        oldworldboa = {};
+        oldworldboa = {
+	  extensions = {
+	    force = true;
+	  };
+	};
       };
   };
 }

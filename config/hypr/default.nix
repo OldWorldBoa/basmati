@@ -5,6 +5,7 @@
   imports = [
     ./default-style.nix
     ./keybinds.nix
+    ./waybar.nix
   ];
 
   wayland.windowManager.hyprland = {

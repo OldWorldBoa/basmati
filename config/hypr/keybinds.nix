@@ -13,6 +13,7 @@
       "$terminal"
       "$browser"
       "blueman-applet"
+      "waybar"
     ];
 
     bind = [

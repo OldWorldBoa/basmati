@@ -8,11 +8,35 @@
 
   stylix = {
     enable = true;
-    targets.kitty.enable = true;
-    targets.librewolf = {
-      enable = true;
-      profileNames = [ "oldworldboa" ];
-    };
     base16Scheme = "${pkgs.base16-schemes}/share/themes/equilibrium-light.yaml";
+
+    targets = {
+      kitty.enable = true;
+
+      hyprland = {
+	enable = true;
+      };
+
+      librewolf = {
+        enable = true;
+	colorTheme.enable = true;
+        profileNames = [ "oldworldboa" ];
+      };
+    };
+
+    fonts = {
+      serif = {
+        package = pkgs.nerd-fonts.terminess-ttf;
+	name = "Terminess";
+      };
+      sansSerif = {
+        package = pkgs.nerd-fonts.terminess-ttf;
+	name = "Terminess";
+      };
+      monospace = {
+        package = pkgs.nerd-fonts.terminess-ttf;
+	name = "Terminess";
+      };
+    };
   };
 }
