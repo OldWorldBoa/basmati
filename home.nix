@@ -2,11 +2,7 @@
 
 {
   imports = [
-    ./git.nix
-    inputs.hyprland.homeManagerModules.default
-    ./hypr/hyprland.nix
-    ./nixvim
-    ./kitty/kitty.nix
+    ./config
   ];
 
   home = {

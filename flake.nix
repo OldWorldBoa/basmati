@@ -13,9 +13,14 @@
       url = "github:nix-community/home-manager/release-25.11";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    stylix = {
+      url = "github:nix-community/stylix/release-25.11";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = inputs@{ self, nixpkgs, nixvim, home-manager, hyprland, ... }: {
+  outputs = inputs@{ self, nixpkgs, nixvim, home-manager, hyprland, stylix, ... }: {
     homeConfigurations."oldworldboa@nixos" = home-manager.lib.homeManagerConfiguration {
       pkgs = nixpkgs.legacyPackages.x86_64-linux;
 
