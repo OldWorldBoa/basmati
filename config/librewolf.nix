@@ -1,4 +1,4 @@
-{...} :
+{ config, lib, pkgs, ... }:
 
 {
   programs.librewolf = {
@@ -10,5 +10,4 @@
         oldworldboa = {};
       };
   };
-  config.stylix.targets.librewolf.profileNames = ["oldworldboa"];
 }

@@ -9,6 +9,10 @@
   stylix = {
     enable = true;
     targets.kitty.enable = true;
+    targets.librewolf = {
+      enable = true;
+      profileNames = [ "oldworldboa" ];
+    };
     base16Scheme = "${pkgs.base16-schemes}/share/themes/equilibrium-light.yaml";
   };
 }
