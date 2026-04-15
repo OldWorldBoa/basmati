@@ -1,13 +1,5 @@
 {
   programs.nixvim = {
-    colorschemes.cyberdream = {
-      enable = true;
-      settings =  {
-        variang = "light";
-	transparent = true;
-      };
-    };
-
     globals = {
       mapleader = " ";
       maplocalleader = " ";
