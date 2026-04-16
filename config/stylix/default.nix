@@ -13,6 +13,7 @@
 
     targets = {
       kitty.enable = true;
+      waybar.enable = false;
 
       hyprland = {
 	enable = true;

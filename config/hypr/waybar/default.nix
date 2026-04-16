@@ -1,14 +1,14 @@
-{ ... }:
-{
+{ ... }: {
   programs.waybar = {
     enable = true;
+    style = ./waybar.css;
 
     settings.main = {
       spacing = 4;
       modules-left = [ "hyprland/workspaces" ];
       modules-center = [ "hyprland/window" ];
       modules-right = [ 
-        "pulseaudio"
+	"pulseaudio"
 	"cpu"
 	"memory"
 	"temperature"
@@ -17,56 +17,54 @@
       ];
 
       "hyprland/workspaces" = {
-        format = "{icon}";
+	format = "{icon}";
       };
 
       "hyprland/window" = {
-        separate-outputs = true;
+	separate-outputs = true;
       };
 
       pulseaudio = {
-        format = "{volume}% {icon} {format_source}";
-        format-bluetooth = "{volume}% {icon}󰂯 {format_source}";
-        format-bluetooth-muted = "󰝟 {icon}󰂯 {format_source}";
-        format-muted = "󰝟 {format_source}";
-        format-source = "{volume}% ";
-        format-source-muted = "";
+	format = "{volume}% {icon} {format_source}";
+	format-bluetooth = "{volume}% {icon}󰂯 {format_source}";
+	format-bluetooth-muted = "󰝟 {icon}󰂯 {format_source}";
+	format-muted = "󰝟 {format_source}";
+	format-source = "{volume}% ";
+	format-source-muted = "";
 	format-icons = {
-	 headphone = "";
-	 hands-free = "󰏳";
-	 headset = "󰋎";
-	 phone = "";
-	 portable = "";
-	 car = "";
-	 default = ["" "" ""];
-	 on-click = "pavucontrol";
+	  headphone = "";
+	  hands-free = "󰏳";
+	  headset = "󰋎";
+	  phone = "";
+	  portable = "";
+	  car = "";
+	  default = ["" "" ""];
+	  on-click = "pavucontrol";
 	};
       };
 
       cpu = {
-        format = "{}% ";
+	format = "{}% ";
 	tooltip = false;
       };
 
       memory = {
-        format = "{}% ";
+	format = "{}% ";
       };
 
       temperature = {
-        critical-threshold = 80;
+	critical-threshold = 80;
 	format = "{temperatureC}C {icon}";
       };
 
       clock = {
-        tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
+	tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
 	format-alt = "{:%Y-%m-%d}";
       };
 
       tray = {
-        spacing = 10;
+	spacing = 10;
       };
     };
-
-    style = ./waybar.css
   };
 }
