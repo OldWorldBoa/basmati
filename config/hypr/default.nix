@@ -6,7 +6,7 @@
     inputs.hyprland.homeManagerModules.default
     ./default-style.nix
     ./keybinds.nix
-    ./waybar.nix
+    ./waybar
   ];
 
   wayland.windowManager.hyprland = {

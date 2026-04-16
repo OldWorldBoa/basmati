@@ -2,6 +2,7 @@
 {
   programs.waybar = {
     enable = true;
+
     settings.main = {
       spacing = 4;
       modules-left = [ "hyprland/workspaces" ];
@@ -65,5 +66,7 @@
         spacing = 10;
       };
     };
+
+    style = ./waybar.css
   };
 }
