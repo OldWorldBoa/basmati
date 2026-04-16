@@ -9,6 +9,7 @@
   stylix = {
     enable = true;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/equilibrium-light.yaml";
+    image = ./white-cpu.jpg;
 
     targets = {
       kitty.enable = true;

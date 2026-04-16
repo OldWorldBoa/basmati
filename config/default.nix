@@ -4,9 +4,9 @@
   imports = [
     ./hypr
     ./nixvim
+    ./stylix
     ./kitty.nix
     ./git.nix
-    ./stylix.nix
     ./librewolf.nix
   ];
 }
