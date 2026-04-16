@@ -1,4 +1,6 @@
 { ... }: {
+  home.file."waybar/border.png".source = ./border.png;
+
   programs.waybar = {
     enable = true;
     style = ./waybar.css;

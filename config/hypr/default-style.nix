@@ -19,7 +19,7 @@
 
 	shadow = {
 	  enabled = true;
-	  range = 4;
+	  range = 14;
 	  render_power = 3;
 	};
 

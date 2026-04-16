@@ -16,6 +16,7 @@
       pkgs.blueman
       pkgs.wl-clipboard-rs
       pkgs.pavucontrol
+      pkgs.gimp
     ];
   };
 
