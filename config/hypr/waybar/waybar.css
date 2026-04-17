@@ -5,6 +5,23 @@ window#waybar {
 
 .modules-left, .modules-center, .modules-right {
   background-color: rgba(245, 240, 231, 0.9);
-  border-image: url("./border.png") 40% stretch;
+  border: 10px solid transparent;
+  border-top: none;
+  border-image: url("/home/oldworldboa/.config/waybar/border.png") 40 round;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.modules-center {
+  border-radius: 0 0 15px 15px;
+}
+
+.modules-left {
+  border-radius: 0 0 15px 0;
+  border-left: none;
+}
+
+.modules-right {
+  border-radius: 0 0 0 15px;
+  border-right: none;
 }
 

@@ -1,5 +1,5 @@
 { ... }: {
-  home.file."waybar/border.png".source = ./border.png;
+  home.file.".config/waybar/border.png".source = ./border.png;
 
   programs.waybar = {
     enable = true;
