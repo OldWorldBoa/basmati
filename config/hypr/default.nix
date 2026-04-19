@@ -4,6 +4,7 @@
 {
   imports = [
     inputs.hyprland.homeManagerModules.default
+    ./equilibrium-light.nix
     ./default-style.nix
     ./keybinds.nix
     ./waybar

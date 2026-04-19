@@ -1,14 +1,29 @@
 window#waybar {
-  background-color: rgba(245, 240, 231, 0);
+  background-color: transparent;
   color: rgb(24, 28, 34);
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  min-width: 25px;
+}
+
+tooltip {
+  text-shadow: none;
+  background-clip: border-box;
+  background-color: rgba(245, 240, 231, 0.9);
+  border: 10px solid transparent;
+  border-radius: 15px;
+  border-image: url("border.png") 40 round;
 }
 
 .modules-left, .modules-center, .modules-right {
   background-color: rgba(245, 240, 231, 0.9);
   border: 10px solid transparent;
   border-top: none;
-  border-image: url("/home/oldworldboa/.config/waybar/border.png") 40 round;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border-image: url("border.png") 40 round;
+  padding: 5px 10px 0 10px;
 }
 
 .modules-center {
@@ -18,6 +33,7 @@ window#waybar {
 .modules-left {
   border-radius: 0 0 15px 0;
   border-left: none;
+  padding-right: 5px;
 }
 
 .modules-right {
@@ -25,3 +41,10 @@ window#waybar {
   border-right: none;
 }
 
+#workspaces button {
+  border: 5px solid transparent;
+}
+
+#workspaces button.active {
+  border-image: url("border.png") 11 round;
+}

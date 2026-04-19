@@ -6,62 +6,91 @@
     style = ./waybar.css;
 
     settings.main = {
-      spacing = 4;
+      spacing = 10;
       modules-left = [ "hyprland/workspaces" ];
-      modules-center = [ "hyprland/window" ];
-      modules-right = [ 
-	"pulseaudio"
-	"cpu"
-	"memory"
-	"temperature"
+      modules-center = [ 
 	"clock"
-	"tray"
       ];
+      modules-right = [ 
+        "pulseaudio"
+	"custom/spacer"
+	"custom/system-monitor"
+	"custom/spacer"
+	"custom/bluetooth"
+      ];
+
+      "custom/system-monitor" = {
+        format = "󰇅";
+	on-click = "kitty gotop";
+	tooltip = false;
+      };
+
+      "custom/bluetooth" = {
+        format = "󰂳";
+	on-click = "kitty bluetui";
+	tooltip = false;
+      };
+
+      "custom/mixer" = {
+        format = "󰋍 ";
+	on-click = "kitty pulsemixer";
+	tooltip = false;
+      };
+
+      "custom/spacer" = {
+        format = "<span color='#0073b5'> </span>";
+        tooltip = false;
+      };
 
       "hyprland/workspaces" = {
 	format = "{icon}";
       };
 
-      "hyprland/window" = {
-	separate-outputs = true;
-      };
-
       pulseaudio = {
-	format = "{volume}% {icon} {format_source}";
-	format-bluetooth = "{volume}% {icon}󰂯 {format_source}";
-	format-bluetooth-muted = "󰝟 {icon}󰂯 {format_source}";
-	format-muted = "󰝟 {format_source}";
-	format-source = "{volume}% ";
-	format-source-muted = "";
+	format = "󰋍 ";
 	format-icons = {
-	  headphone = "";
-	  hands-free = "󰏳";
-	  headset = "󰋎";
-	  phone = "";
-	  portable = "";
-	  car = "";
-	  default = ["" "" ""];
-	  on-click = "pavucontrol";
+	  default = [
+	    "󰝣 󰝣 󰝣 󰝣 󰝣 󰝣 󰝣 󰝣 󰝣 󰝣 󰝣 "
+	    "󱡔 󰝣 󰝣 󰝣 󰝣 󰝣 󰝣 󰝣 󰝣 󰝣 󰝣 "
+	    "󰝤 󰝣 󰝣 󰝣 󰝣 󰝣 󰝣 󰝣 󰝣 󰝣 󰝣 "
+	    "󰝤 󱡔 󰝣 󰝣 󰝣 󰝣 󰝣 󰝣 󰝣 󰝣 󰝣 "
+	    "󰝤 󰝤 󰝣 󰝣 󰝣 󰝣 󰝣 󰝣 󰝣 󰝣 󰝣 "
+	    "󰝤 󰝤 󱡔 󰝣 󰝣 󰝣 󰝣 󰝣 󰝣 󰝣 󰝣 "
+	    "󰝤 󰝤 󰝤 󰝣 󰝣 󰝣 󰝣 󰝣 󰝣 󰝣 󰝣 "
+	    "󰝤 󰝤 󰝤 󱡔 󰝣 󰝣 󰝣 󰝣 󰝣 󰝣 󰝣 "
+	    "󰝤 󰝤 󰝤 󰝤 󰝣 󰝣 󰝣 󰝣 󰝣 󰝣 󰝣 "
+	    "󰝤 󰝤 󰝤 󰝤 󱡔 󰝣 󰝣 󰝣 󰝣 󰝣 󰝣 "
+	    "󰝤 󰝤 󰝤 󰝤 󰝤 󰝣 󰝣 󰝣 󰝣 󰝣 󰝣 "
+	    "󰝤 󰝤 󰝤 󰝤 󰝤 󱡔 󰝣 󰝣 󰝣 󰝣 󰝣 "
+	    "󰝤 󰝤 󰝤 󰝤 󰝤 󰝤 󰝣 󰝣 󰝣 󰝣 󰝣 "
+	    "󰝤 󰝤 󰝤 󰝤 󰝤 󰝤 󱡔 󰝣 󰝣 󰝣 󰝣 "
+	    "󰝤 󰝤 󰝤 󰝤 󰝤 󰝤 󰝤 󰝣 󰝣 󰝣 󰝣 "
+	    "󰝤 󰝤 󰝤 󰝤 󰝤 󰝤 󰝤 󱡔 󰝣 󰝣 󰝣 "
+	    "󰝤 󰝤 󰝤 󰝤 󰝤 󰝤 󰝤 󰝤 󰝣 󰝣 󰝣 "
+	    "󰝤 󰝤 󰝤 󰝤 󰝤 󰝤 󰝤 󰝤 󱡔 󰝣 󰝣 "
+	    "󰝤 󰝤 󰝤 󰝤 󰝤 󰝤 󰝤 󰝤 󰝤 󰝣 󰝣 "
+	    "󰝤 󰝤 󰝤 󰝤 󰝤 󰝤 󰝤 󰝤 󰝤 󱡔 󰝣 "
+	    "󰝤 󰝤 󰝤 󰝤 󰝤 󰝤 󰝤 󰝤 󰝤 󰝤 󰝣 "
+	    "󰝤 󰝤 󰝤 󰝤 󰝤 󰝤 󰝤 󰝤 󰝤 󰝤 󱡔 "
+	    "󰝤 󰝤 󰝤 󰝤 󰝤 󰝤 󰝤 󰝤 󰝤 󰝤 󰝤 "
+	  ];
 	};
-      };
-
-      cpu = {
-	format = "{}% ";
-	tooltip = false;
-      };
-
-      memory = {
-	format = "{}% ";
-      };
-
-      temperature = {
-	critical-threshold = 80;
-	format = "{temperatureC}C {icon}";
+	on-click = "kitty pulsemixer";
+	tooltip-format = "<span color='#181c22'>{desc}</span>\n<span color='#181c22'>󰕿 {icon}</span>";
       };
 
       clock = {
-	tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
-	format-alt = "{:%Y-%m-%d}";
+	tooltip-format = "<tt><small>{calendar}</small></tt>";
+	format = "{:%R}  ";
+	format-alt = "{:%m-%d}  ";
+	calendar = {
+	  format = {
+	    months = "<span color='#2c3138'><big><b>{}</b></big></span>";
+	    weekdays = "<span color='#0073b5'><b>{}</b></span>";
+	    days = "<span color='#73777f'><b>{}</b></span>";
+	    today = "<span color='#bf3e05'><b>{}</b></span>";
+	  };
+	};
       };
 
       tray = {

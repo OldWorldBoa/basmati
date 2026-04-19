@@ -49,6 +49,17 @@
       "$mod SHIFT, 7, movetoworkspace, 7"
       "$mod SHIFT, 8, movetoworkspace, 8"
       "$mod SHIFT, 9, movetoworkspace, 9"
+      # Tabbing
+      "$mod, T, togglegroup"
+      "$mod+ALT, 1, changegroupactive, 1"
+      "$mod+ALT, 2, changegroupactive, 2"
+      "$mod+ALT, 3, changegroupactive, 3"
+      "$mod+ALT, 4, changegroupactive, 4"
+      "$mod+ALT, 5, changegroupactive, 5"
+      "$mod+ALT, 6, changegroupactive, 6"
+      "$mod+ALT, 7, changegroupactive, 7"
+      "$mod+ALT, 8, changegroupactive, 8"
+      "$mod+ALT, 9, changegroupactive, 9"
     ];
 
     bindm = [

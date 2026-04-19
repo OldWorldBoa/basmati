@@ -13,10 +13,12 @@
       pkgs.hyprlauncher
       pkgs.discord
       pkgs.steam
-      pkgs.blueman
       pkgs.wl-clipboard-rs
-      pkgs.pavucontrol
       pkgs.gimp
+      pkgs.gotop
+      pkgs.bluetui
+      pkgs.bluez
+      pkgs.pulsemixer
     ];
   };
 
