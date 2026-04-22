@@ -9,18 +9,12 @@
   stylix = {
     enable = true;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/equilibrium-light.yaml";
-    image = ./white-cpu.jpg;
 
     targets = {
-      kitty.enable = true;
+      hyprland.enable = false;
       waybar.enable = false;
 
-      hyprland = {
-	enable = true;
-      };
-
       librewolf = {
-        enable = true;
 	colorTheme.enable = true;
         profileNames = [ "oldworldboa" ];
       };
@@ -29,15 +23,15 @@
     fonts = {
       serif = {
         package = pkgs.nerd-fonts.terminess-ttf;
-	name = "Terminess";
+	name = "Terminess Nerd Font";
       };
       sansSerif = {
         package = pkgs.nerd-fonts.terminess-ttf;
-	name = "Terminess";
+	name = "Terminess Nerd Font";
       };
       monospace = {
         package = pkgs.nerd-fonts.terminess-ttf;
-	name = "Terminess";
+	name = "Terminess Nerd Font";
       };
     };
   };

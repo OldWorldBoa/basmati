@@ -4,8 +4,7 @@
   imports = [
     ./hypr
     ./nixvim
-    ./theme/equilibrium-light.nix
-    #./stylix
+    ./stylix
     ./kitty.nix
     ./git.nix
     ./librewolf.nix

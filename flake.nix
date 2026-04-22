@@ -2,6 +2,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
     nixvim.url = "github:nix-community/nixvim";
+    awww.url = "git+https://codeberg.org/LGFae/awww";
     hyprland.url = "github:hyprwm/Hyprland";
 
     home-manager = {

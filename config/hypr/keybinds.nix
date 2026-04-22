@@ -14,6 +14,7 @@
       "$browser"
       "blueman-applet"
       "waybar"
+      "awww-daemon"
     ];
 
     bind = [

@@ -1,16 +1,28 @@
 { config, lib, pkgs, ... }:
-
+with config.lib.stylix;
+let
+  toRGB = colour: ''0xFF${colour}'';
+  toARGB = alpha: colour: ''0x${alpha}${colour}'';
+in
 {
+
   wayland.windowManager.hyprland = {
     settings = {
       general = {
         gaps_in = 5;
         gaps_out = 20;
         border_size = 2;
+	"col.inactive_border" = toRGB colors.base01;
+	"col.active_border" = toRGB colors.base0D; 
 
         resize_on_border = false;
         allow_tearing = false;
         layout = "dwindle";
+      };
+
+      misc = {
+	background_color = toRGB colors.base00;
+	font_family = "Terminess Nerd Font";
       };
 
       decoration = {
@@ -19,8 +31,10 @@
 
 	shadow = {
 	  enabled = true;
-	  range = 14;
+	  color = toRGB colors.base03;
+	  range = 10;
 	  render_power = 3;
+	  offset = "1 1";
 	};
 
 	blur = {
@@ -28,6 +42,17 @@
 	  size = 4;
 	  passes = 1;
 	  vibrancy = 0.19;
+	};
+      };
+
+      group = {
+	"col.border_active" = toRGB colors.base0D; 
+	"col.border_inactive" = toRGB colors.base01;
+	groupbar = {
+          text_color = toRGB colors.base07;
+          text_color_inactive = toRGB colors.base04;
+	  "col.inactive" = toRGB colors.base01;
+	  "col.active" = toRGB colors.base0D; 
 	};
       };
 
