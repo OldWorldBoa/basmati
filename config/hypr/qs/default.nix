@@ -1,6 +1,6 @@
 {...}: {
-  home.file.".config/qs/".source = {
-    source = ./;
+  home.file.".config/qs/" = {
+    source = ./src;
     recursive = true;
-  }
+  };
 }
