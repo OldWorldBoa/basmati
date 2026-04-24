@@ -3,6 +3,8 @@
     ./autopairs.nix
     ./nnn.nix
 		./telescope.nix
+		./lsp.nix
+		./conform.nix
   ];
 
   programs.nixvim.plugins = {
@@ -10,6 +12,6 @@
     which-key.enable = true;
 		dap.enable = true;
 		rustaceanvim.enable = true;
-		telescope.enable = true;
+		lazydev.enable = true;
   };
 }

@@ -25,5 +25,10 @@
       key="<Esc><Esc>";
       mode="t";
     }
+		{
+			action="<cmd>require(\"conform\").format({async = true, lsp_format=\"fallback\"})";
+			key="<leader>f";
+			mode="";
+		}
   ];
 }
