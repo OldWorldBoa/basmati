@@ -20,6 +20,7 @@
       bluez
       pulsemixer
       quickshell
+      obsidian
       inputs.awww.packages.${pkgs.stdenv.hostPlatform.system}.awww
     ];
   };

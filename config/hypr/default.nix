@@ -6,9 +6,13 @@
     inputs.hyprland.homeManagerModules.default
     ./default-style.nix
     ./keybinds.nix
-    ./waybar
     ./qs
   ];
+
+  programs.bash = {
+    enable = true;
+    bashrcExtra = "";
+  };
 
   wayland.windowManager.hyprland = {
     enable = true;

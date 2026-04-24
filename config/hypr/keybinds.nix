@@ -13,7 +13,7 @@
       "$terminal"
       "$browser"
       "blueman-applet"
-      "waybar"
+      "qs -p ~/.config/qs/shell.qml"
       "awww-daemon"
     ];
 

@@ -26,7 +26,7 @@ Scope {
       }
 
       color: "transparent"
-      implicitHeight: childrenRect.height
+      implicitHeight: 40
 
       RowLayout {
 	anchors.fill: parent

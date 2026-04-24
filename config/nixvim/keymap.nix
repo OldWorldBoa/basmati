@@ -10,5 +10,20 @@
       key = "<right>";
       mode = "n";
     }
+    {
+      action="<cmd>nohlsearch<CR>";
+      key="<Esc>";
+      mode="n";
+    }
+    {
+      action="vim.diagnostic.setloclist";
+      key="<leader>q";
+      mode="n";
+    }
+    {
+      action="<C-\\><C-n>";
+      key="<Esc><Esc>";
+      mode="t";
+    }
   ];
 }
