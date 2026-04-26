@@ -5,6 +5,7 @@
     ./conform.nix
     ./lsp.nix
     ./markdown-preview.nix
+    ./mini.nix
     ./nnn.nix
     ./telescope.nix
     ./todo-comments.nix
