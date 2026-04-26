@@ -9,6 +9,7 @@
     ./nnn.nix
     ./telescope.nix
     ./todo-comments.nix
+    ./treesitter.nix
   ];
 
   programs.nixvim.plugins = {
