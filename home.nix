@@ -9,6 +9,7 @@
     username = "oldworldboa";
     homeDirectory = "/home/oldworldboa";
     stateVersion = "25.11";
+
     packages = with pkgs; [
       hyprlauncher
       discord
@@ -21,8 +22,17 @@
       pulsemixer
       quickshell
       obsidian
+      nightdiamond-cursors
       inputs.awww.packages.${pkgs.stdenv.hostPlatform.system}.awww
     ];
+
+    pointerCursor = with pkgs; {
+      gtk.enable = true;
+      x11.enable = true;
+      package = nightdiamond-cursors;
+      name = "NightDiamond-Blue";
+      size = 20;
+    };
   };
 
   programs = {
