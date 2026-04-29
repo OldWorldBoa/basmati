@@ -3,7 +3,12 @@
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
     nixvim.url = "github:nix-community/nixvim";
     awww.url = "git+https://codeberg.org/LGFae/awww";
+
     hyprland.url = "github:hyprwm/Hyprland";
+    hypr-dynamic-cursors = {
+      url = "github:VirtCode/hypr-dynamic-cursors";
+      inputs.hyprland.follows = "hyprland"; # to make sure that the plugin is built for the correct version of hyprland
+    };
 
     home-manager = {
       url = "github:nix-community/home-manager/release-25.11";

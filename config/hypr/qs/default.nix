@@ -3,4 +3,6 @@
     source = ./src;
     recursive = true;
   };
+
+  #TODO: Remake buttons for bluetui, gotop, and pulsemixer
 }

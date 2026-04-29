@@ -19,6 +19,7 @@
     systemd.enable = true;
 
     plugins = [
+      inputs.hypr-dynamic-cursors.packages.${pkgs.stdenv.hostPlatform.system}.hypr-dynamic-cursors
     ];
 
     settings = {
