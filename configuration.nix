@@ -123,7 +123,6 @@
 #  wget
   ];
 
-
   fonts.packages = with pkgs; [
     nerd-fonts.terminess-ttf
   ];

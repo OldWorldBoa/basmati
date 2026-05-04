@@ -67,6 +67,7 @@
         nixd.enable = true;
         pylsp.enable = true;
         systemd_lsp.enable = true;
+	qmlls.enable = true;
       };
     };
   };
