@@ -14,7 +14,7 @@
       "$browser"
       "blueman-applet"
       "qs -p ~/.config/qs/shell.qml"
-      "awww-daemon"
+      "awww-daemon && ~/.config/awww_randomize_multi.sh ~/.config/backgrounds"
     ];
 
     bind = [
