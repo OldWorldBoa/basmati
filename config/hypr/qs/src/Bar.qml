@@ -64,21 +64,15 @@ Scope {
                             dispatch: "exec kitty pulsemixer"
                         }
 
-                        Rectangle {
-                            width: 1
-                            height: 16
-                            color: Theme.base03
+                        Spacer {
                         }
 
                         DispatchButton {
-                            text: "󰂳 "
+                            text: "󰂳"
                             dispatch: "exec kitty bluetui"
                         }
 
-                        Rectangle {
-                            width: 1
-                            height: 16
-                            color: Theme.base03
+                        Spacer {
                         }
 
                         DispatchButton {
