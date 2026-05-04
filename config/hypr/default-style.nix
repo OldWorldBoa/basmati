@@ -6,6 +6,19 @@ let
 in
 {
 
+  home.file.".config/hypr/hyprtoolkit.conf".text = ''
+    background=${toARGB "AA" colors.base00}
+    base=${toRGB colors.base00}
+    text=${toRGB colors.base04}
+    alternate_base=${toRGB colors.base01}
+    bright_text=${toRGB colors.base0A}
+    accent=${toRGB colors.base0D}
+    accent_secondary=${toRGB colors.base0B}
+    font_family="Terminess Nerd Font"
+    rounding_large=1
+    rounding_small=1
+  '';
+
   wayland.windowManager.hyprland = {
     settings = {
       general = {
@@ -13,7 +26,7 @@ in
         gaps_out = 20;
         border_size = 2;
 	"col.inactive_border" = toRGB colors.base01;
-	"col.active_border" = toRGB colors.base0D; 
+	"col.active_border" = toRGB colors.base0D;
 
         resize_on_border = false;
         allow_tearing = false;
@@ -46,20 +59,20 @@ in
       };
 
       group = {
-	"col.border_active" = toRGB colors.base0D; 
+	"col.border_active" = toRGB colors.base0D;
 	"col.border_inactive" = toRGB colors.base01;
 	groupbar = {
           text_color = toRGB colors.base07;
           text_color_inactive = toRGB colors.base04;
 	  "col.inactive" = toRGB colors.base01;
-	  "col.active" = toRGB colors.base0D; 
+	  "col.active" = toRGB colors.base0D;
 	};
       };
 
       animations = {
         enabled = "yes, please :)";
 
-	bezier = [ 
+	bezier = [
 	  "easeOutQuint,0.23,1,0.32,1"
 	  "easeInOutCubic,0.65,0.05,0.36,1"
 	  "linear,0,0,1,1"

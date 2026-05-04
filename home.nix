@@ -11,6 +11,7 @@
     stateVersion = "25.11";
 
     packages = with pkgs; [
+      hyprtoolkit
       hyprlauncher
       discord
       steam
@@ -23,6 +24,9 @@
       quickshell
       obsidian
       nightdiamond-cursors
+      cargo
+      rustc
+      gcc
       inputs.awww.packages.${pkgs.stdenv.hostPlatform.system}.awww
     ];
 
