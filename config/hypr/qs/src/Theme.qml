@@ -2,6 +2,7 @@ import QtQuick
 import Quickshell
 pragma Singleton
 
+// This is for development only. Put changes in ../default.nix as that is what is put in the built system.
 Singleton {
     id: root
 

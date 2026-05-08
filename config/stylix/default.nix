@@ -8,11 +8,13 @@
 
   stylix = {
     enable = true;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/equilibrium-light.yaml";
+    # Light
+    # base16Scheme = "${pkgs.base16-schemes}/share/themes/equilibrium-light.yaml";
+    # Dark
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/equilibrium-gray-dark.yaml";
 
     targets = {
       hyprland.enable = false;
-      waybar.enable = false;
 
       librewolf = {
 	colorTheme.enable = true;
